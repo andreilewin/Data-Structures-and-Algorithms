@@ -1,0 +1,22 @@
+void sortirovka2(double n, double* mass)
+{
+	int Flag = 1;
+	int m = n - 1;
+	double x = 0;
+	while ((m > 1) && (Flag == 1))
+	{
+		Flag = 0;
+		for (int i = 0; i < m; i++)
+		{
+			if (mass[i] > mass[i + 1])
+			{
+				x = mass[i];
+				mass[i] = mass[i + 1];
+				mass[i + 1] = x;
+				Flag = 1;
+			}
+		}
+		m = m - 1;
+	}
+}
+
